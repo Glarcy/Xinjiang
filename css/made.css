@@ -1,0 +1,308 @@
+@font-face {
+    font-family: '方正藏体简体';
+    src: url('fonts/方正藏体简体.ttf');
+}
+body,html {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Slabo 27px', serif;
+    font-size: 16px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+button{
+    border: none;
+    outline: none;
+}
+
+a{
+    text-decoration: none;
+}
+.menu {
+    float: right;
+    position: absolute;
+    z-index: 102;
+    top: 30px;
+    right: 5%;
+    padding-top: 10px;
+}
+
+.menu a {
+    display: inline-block;
+    font-size: 24px;
+    font-family: 方正藏体简体;
+    margin: 10px;
+    color: #fff;
+    font-weight: 500;
+    line-height: 30px;
+    border-bottom: 4px solid transparent;
+}
+
+.menu a:hover {
+    color: #ee0000;
+    border-color: #ee0000;
+}
+
+.menu a.current,
+.menu a.current:hover {
+    color: #ee0000;
+    border-color: #ee0000;
+}
+
+.wrapper {
+    height: 100%;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+.wrapper .container {
+    height: 100%;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+
+.slideshow {
+    height: 100%;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+.slideshow .picLeft {
+    width: 40%;
+    float: left;
+    position: relative;
+    height: 100%;
+}
+.slideshow .picLeft .Lslide {
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+
+}
+.slideshow .picLeft .Lslide img {
+    width: 100%;
+    height: 100%;
+}
+.slideshow .picLeft .Lslide .videoBtn{
+    position: absolute;
+    width: 12rem;
+    height: 50px;
+    top: 47%;
+    left: 37%;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: rgba(255,255,255,0.2);
+    z-index: 150;
+    cursor: pointer;
+}
+
+#mask{
+    display: none;
+    height: 69.99rem;
+    width:100%;
+    position: fixed;
+    z-index: 300;
+    left: 0;
+    top: 0;
+    background: rgba(20,20,20,0.7);
+}
+
+#close{
+    float: right;
+    cursor: pointer;
+    padding: 36px 53px 0 0;
+}
+/*关闭按钮样式*/
+.close{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    position: fixed;
+}
+.close::before,.close::after{
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 0;
+    margin-top: -1px;
+    background-color: #f0f0f0;
+    width: 100%;
+    height: 3px;
+}
+.close::before{
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -sand-transform:rotate(45deg);
+}
+.close::after{
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -sand-transform:rotate(-45deg);
+}
+
+.wrapper video{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    z-index:9999;
+}
+
+#making{
+    transform: rotateY(-25deg) rotateX(0deg);
+    -sand-transform: rotateY(-25deg) rotateX(0deg);
+    -ms-transform:rotateY(-25deg) rotateX(0deg);; 	/* IE 9 */
+    -moz-transform:rotateY(-25deg) rotateX(0deg);; 	/* Firefox */
+    -webkit-transform:rotateY(-25deg) rotateX(0deg);; /* Safari 和 Chrome */
+    -o-transform:rotateY(-25deg) rotateX(0deg);; 	/* Opera */
+}
+
+#enquiry{
+    transform: rotateY(0deg) rotateX(-45deg);
+    -ms-transform:rotateY(0deg) rotateX(-45deg); 	/* IE 9 */
+    -moz-transform:rotateY(0deg) rotateX(-45deg); 	/* Firefox */
+    -webkit-transform:rotateY(0deg) rotateX(-45deg); /* Safari 和 Chrome */
+    -o-transform:rotateY(0deg) rotateX(-45deg); 	/* Opera */
+    -sand-transform:rotateY(0deg) rotateX(-45deg);
+}
+
+.slideshow .fontRight {
+    width: 60%;
+    float: left;
+    position: relative;
+    height: 100%;
+}
+.slideshow .fontRight .Rslide {
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.slideshow .fontDescription {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform:translate(-50%, -50%);
+    -sand-transform:translate(-50%, -50%);
+}
+.slideshow .fontDescription h2 {
+    color: #fff;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 0.8;
+}
+.slideshow .fontDescription p {
+    width: 43.92rem;
+    color: #fff;
+    font-size: 1.29rem;
+    font-weight: 400;
+    margin-right: 20px;
+    line-height: 28px;
+    padding:2rem 0 0 0;
+}
+
+.slideshow .fontDescription .button {
+    background-color: #fff;
+    display: inline-block;
+    border-radius: 25px;
+    position: relative;
+}
+
+.control {
+    position: absolute;
+    left: 40%;
+    top: 50%;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -o-transform:translateY(-50%);
+    -sand-transform:translateY(-50%);
+}
+
+.control .upBtn {
+    width: 45px;
+    height: 50px;
+    background-color: #fff;
+    z-index: 5;
+    position: relative;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+.control .downBtn {
+    width: 45px;
+    height: 50px;
+    background-color: #fff;
+    z-index: 5;
+    position: relative;
+    border-radius: 4px 0 0 4px;
+    left: -45px;
+    cursor: pointer;
+}
+.control .updownBtn img{
+    margin: 12.5px 0 0 10px;
+    width: 25px;
+    height: 25px;
+}
+
+#buttons {
+    position: absolute;
+    left: 15%;
+    bottom: 20px;
+    z-index: 2;
+    height: 10px;
+    width: 100px;
+}
+
+#buttons span {
+    float: left;
+    position: relative;
+    margin-right: 5px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background: rgba(150,150,150,0.4);
+    cursor: pointer;
+}
+
+#buttons .on:after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 3px;
+    left: 3px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.8);
+}

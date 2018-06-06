@@ -1,0 +1,15 @@
+.singleBlock, .blockBase, .sl-slides-wrapper, .blockContent {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+}
+
+.content .blockBase blockquote {
+	width: 50%;
+	left: 25%;
+}
+
+.nav-arrows, .nav-dots {
+	display: none;
+}
