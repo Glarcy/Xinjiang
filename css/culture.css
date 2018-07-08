@@ -1,7 +1,6 @@
 @font-face {
-	font-family: '方正藏体简体','哥特式字体';
-	src: url('fonts/方正藏体简体.ttf'),
-	      url('fonts/GeTeShiZiTi-1.ttf');
+	font-family: '方正藏体简体';
+        src: url('fonts/方正藏体简体.ttf');
 }
 body {
 	font-family:arial;
